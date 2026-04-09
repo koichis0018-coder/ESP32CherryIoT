@@ -26,10 +26,10 @@ void loop()
   for(int i=0; i<128; i++){
     display.clearDisplay();
 
-    display.setTextSize(2);
+    display.setTextSize(3);
     display.setTextColor(SSD1306_WHITE);
-    display.setCursor(i, 25);
-    display.print(F("CherryIoT"));
+    display.setCursor(i, i);
+    display.print(F("SHINGENINUKUN"));
 
     display.display();
     delay(20);
