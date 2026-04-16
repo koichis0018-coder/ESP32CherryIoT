@@ -29,13 +29,17 @@ void loop() {
   if (digitalRead(swPin) == HIGH) {
     swState = !swState;
 
-    ledcWriteTone(spkrPin, DO);
-    delay(250);
+  ledcWriteTone(spkrPin, RE);
+  delay(250);
+  ledcWriteTone(spkrPin, MI);
+  delay(250);
+  ledcWriteTone(spkrPin, FA);
+  delay(1000);
     
   } else {
-    digitalWrite(motorPin, LOW); //OFF
+    digitalWrite(spkrPin, LOW); //OFF
     Serial.println("OFF");
-    delay(300);
+    delay(500);
   }
   
 }
